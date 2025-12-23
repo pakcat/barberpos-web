@@ -310,7 +310,8 @@ const messages = {
 };
 
 // State
-const currentLocale = ref('en');
+const DEFAULT_LOCALE = 'id';
+const currentLocale = ref(DEFAULT_LOCALE);
 const STORAGE_KEY = 'barberpos-locale';
 
 const getQueryLocale = () => {
@@ -325,15 +326,22 @@ const getQueryLocale = () => {
 const detectLanguage = () => {
   const fromQuery = getQueryLocale();
   const saved = typeof localStorage !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null;
+  const browserLangRaw = typeof navigator !== 'undefined'
+    ? (navigator.language || (navigator.languages && navigator.languages[0]) || '')
+    : '';
+  const browserLang = browserLangRaw ? browserLangRaw.toLowerCase().split('-')[0] : '';
+
+  let resolved = DEFAULT_LOCALE;
 
   if (fromQuery === 'en' || fromQuery === 'id') {
-    currentLocale.value = fromQuery;
+    resolved = fromQuery;
   } else if (saved === 'en' || saved === 'id') {
-    currentLocale.value = saved;
-  } else {
-    const browserLang = typeof navigator !== 'undefined' ? navigator.language.split('-')[0] : 'en';
-    currentLocale.value = browserLang === 'id' ? 'id' : 'en';
+    resolved = saved;
+  } else if (browserLang && browserLang !== 'id') {
+    resolved = 'en';
   }
+
+  currentLocale.value = resolved;
 
   if (typeof localStorage !== 'undefined') {
     localStorage.setItem(STORAGE_KEY, currentLocale.value);
