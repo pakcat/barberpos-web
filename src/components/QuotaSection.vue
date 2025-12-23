@@ -133,6 +133,7 @@ useScrollObserver();
   color: var(--accent-primary);
   font-weight: 600;
   opacity: 0.9;
+  line-height: 1.5;
 }
 
 .hover-elevate {

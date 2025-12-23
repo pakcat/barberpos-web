@@ -8,7 +8,7 @@
     <div class="marquee-container fade-in-up delay-200">
       <div class="marquee-track">
          <!-- Duplicate content for seamless loop -->
-         <div class="review-card" v-for="(item, index) in t.testimonials.items" :key="'a-'+index">
+         <div class="review-card" v-for="(item, index) in t.testimonials.items" :key="'a-'+index" :aria-label="`Testimonial ${index + 1}`">
             <div class="card-content">
                <div class="stars">★★★★★</div>
                <p class="review-text">"{{ item.text }}"</p>
@@ -22,7 +22,7 @@
             </div>
          </div>
          <!-- Second set -->
-         <div class="review-card" v-for="(item, index) in t.testimonials.items" :key="'b-'+index">
+         <div class="review-card" v-for="(item, index) in t.testimonials.items" :key="'b-'+index" :aria-label="`Testimonial ${index + 1}`">
             <div class="card-content">
                <div class="stars">★★★★★</div>
                <p class="review-text">"{{ item.text }}"</p>
@@ -36,7 +36,7 @@
             </div>
          </div>
          <!-- Third set for wide screens -->
-         <div class="review-card" v-for="(item, index) in t.testimonials.items" :key="'c-'+index">
+         <div class="review-card" v-for="(item, index) in t.testimonials.items" :key="'c-'+index" :aria-label="`Testimonial ${index + 1}`">
             <div class="card-content">
                <div class="stars">★★★★★</div>
                <p class="review-text">"{{ item.text }}"</p>

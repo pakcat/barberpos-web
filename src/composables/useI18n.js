@@ -35,11 +35,95 @@ const messages = {
         { title: 'Notifications', description: 'In-app notifications to keep your team in sync.' }
       ]
     },
+    valueProps: {
+      title: 'Built to Outpace Any Barbershop OS',
+      subtitle: 'Everything you expect from booking to payments, plus automation and loyalty baked in.',
+      items: [
+        { title: 'Online Booking', description: 'Custom booking page, reminders, and zero missed slots.' },
+        { title: 'Integrated Payments', description: 'QRIS/EDC in one flow. Faster checkout and fewer clicks.' },
+        { title: 'Optimized Hardware', description: 'Runs on any device. Optional POS kit for pro setups.' },
+        { title: 'Campaigns & Blast', description: 'Send segmented SMS/WA/email to win back clients.' },
+        { title: 'Automations', description: 'Engage clients automatically—birthdays, churn alerts, upsells.' },
+        { title: 'Loyalty Program', description: 'Points, tiers, and perks to keep clients returning.' },
+        { title: 'Lightning-Fast POS', description: 'Process payments in seconds. Fair tips and transparent splits.' },
+        { title: 'Inventory in Real Time', description: 'Live stock, purchase orders, and retail tracking in one place.' }
+      ]
+    },
+    stats: {
+      title: 'Trusted at Scale',
+      subtitle: 'Proven usage that keeps growing.',
+      items: [
+        { label: 'Barbers on BarberPOS', value: '800+', caption: 'Oct 2025' },
+        { label: 'Services Completed', value: '250,000+', caption: 'Oct 2025' },
+        { label: 'Transaction Volume', value: '$5,100,000+', caption: 'Oct 2025' }
+      ]
+    },
+    personas: {
+      title: 'Fits Every Role',
+      subtitle: 'Owner, barber, or client—everyone wins.',
+      owner: {
+        title: 'Run the Show',
+        body: '0% human error, 100% peace of mind. Multi-location control, reports, and audits in one dashboard.'
+      },
+      barber: {
+        title: 'Empowered Barbers',
+        body: 'Fair tip splitting, transparent payroll, and clear scheduling keep the team motivated.'
+      },
+      client: {
+        title: 'Delight Clients',
+        body: 'Online booking, loyalty perks, and fast checkout—no waiting, no friction.'
+      }
+    },
+    pricing: {
+      title: 'Quota Packs that Fit Your Flow',
+      subtitle: '1,000 free transactions reset every month. Top up when you need more.',
+      plans: [
+        {
+          name: 'Starter (Free)',
+          price: 'FREE',
+          period: '1000 trx / month',
+          description: 'Included monthly quota. Resets automatically.',
+          features: [
+            'Appointment scheduling & online booking',
+            'POS + QRIS/EDC payments',
+            'Product sales & inventory management',
+            'Reports & insights',
+            'Blast & loyalty basics',
+            'Email & chat support'
+          ],
+          cta: 'Start Free'
+        },
+        {
+          name: 'Top-up Pack',
+          price: 'IDR 100K',
+          period: 'per 1000 trx',
+          description: 'Add quota anytime via Google Pay / Apple Pay. Required when free quota runs out.',
+          features: [
+            'Includes all Starter features',
+            'Manager-controlled quota top-ups',
+            'Unlimited staff & roles',
+            'Advanced automations & loyalty tiers',
+            'Priority support'
+          ],
+          cta: 'Top up inside the app'
+        }
+      ]
+    },
+    security: {
+      title: 'Security & Privacy',
+      subtitle: 'Marketing site only. No login—just safe, minimal contact.',
+      items: [
+        { title: 'HTTPS Everywhere', description: 'Served over TLS. No inline scripts that can be tampered with.' },
+        { title: 'No Data Stored Here', description: 'Contact buttons open your email/phone. No lead capture forms or tracking cookies.' },
+        { title: 'Payment Safety', description: 'Top-ups handled by Google Pay / Apple Pay. We never store card data.' },
+        { title: 'App Controls', description: 'Role-based access, audit logs, and controlled top-ups keep your shop protected.' }
+      ]
+    },
     quota: {
-      title: 'Free Forever Plan',
-      statLabel: 'Free Transactions/Month',
-      description: 'Perfect for startups and independent barbers. <br> <strong>1000 Transactions</strong> reset every single month. <br><span class="top-up-note">Ran out? Top up instantly via Google Pay or Apple Pay.</span>',
-      cta: 'Start Your Free Plan',
+      title: 'Quota Built for Growth',
+      statLabel: 'Free Transactions / Month',
+      description: 'You get <strong>1000 free transactions</strong> every month, auto-reset. <br><span class="top-up-note">When it runs out, top up 1000 more via Google Pay or Apple Pay—transactions pause until you refill.</span>',
+      cta: 'Start Free',
       meterText: 'FREE'
     },
     testimonials: {
@@ -104,11 +188,95 @@ const messages = {
         { title: 'Notifikasi', description: 'Notifikasi in-app supaya tim tetap sinkron.' }
       ]
     },
+    valueProps: {
+      title: 'Dirancang Lebih Unggul dari Barber OS',
+      subtitle: 'Dari booking sampai pembayaran, plus otomatisasi & loyalty langsung tersedia.',
+      items: [
+        { title: 'Online Booking', description: 'Halaman booking custom dengan reminder, anti slot kosong.' },
+        { title: 'Pembayaran Terintegrasi', description: 'QRIS/EDC dalam satu alur. Checkout lebih cepat, klik lebih sedikit.' },
+        { title: 'Hardware Siap Pakai', description: 'Jalan di device apa pun. Ada paket POS opsional untuk setup pro.' },
+        { title: 'Campaign & Blast', description: 'SMS/WA/email tersegmentasi untuk winback & promo.' },
+        { title: 'Automations', description: 'Engage otomatis—ulang tahun, churn alert, upsell cerdas.' },
+        { title: 'Loyalty Program', description: 'Poin, tier, dan benefit untuk bikin pelanggan balik lagi.' },
+        { title: 'POS Ngebut', description: 'Proses bayar dalam hitungan detik. Tip adil, split transparan.' },
+        { title: 'Stok Real-Time', description: 'Stok live, purchase order, dan penjualan retail dalam satu dashboard.' }
+      ]
+    },
+    stats: {
+      title: 'Dipercaya di Skala Besar',
+      subtitle: 'Angka pemakaian yang terus bertumbuh.',
+      items: [
+        { label: 'Barber memakai BarberPOS', value: '800+', caption: 'Okt 2025' },
+        { label: 'Layanan terselesaikan', value: '250.000+', caption: 'Okt 2025' },
+        { label: 'Volume transaksi', value: '$5.100.000+', caption: 'Okt 2025' }
+      ]
+    },
+    personas: {
+      title: 'Cocok untuk Semua Peran',
+      subtitle: 'Owner, barber, dan klien sama-sama diuntungkan.',
+      owner: {
+        title: 'Atur Bisnis',
+        body: '0% kesalahan manusia, tenang 100%. Multi-cabang, laporan, dan audit dalam satu dashboard.'
+      },
+      barber: {
+        title: 'Empower Barber',
+        body: 'Tip adil, payroll transparan, jadwal jelas—tim makin semangat.'
+      },
+      client: {
+        title: 'Puas untuk Klien',
+        body: 'Booking online, loyalty, dan bayar kilat—tanpa antri, tanpa ribet.'
+      }
+    },
+    pricing: {
+      title: 'Paket Kuota Sesuai Kebutuhan',
+      subtitle: '1.000 transaksi gratis reset tiap bulan. Top up saat habis.',
+      plans: [
+        {
+          name: 'Starter (Gratis)',
+          price: 'GRATIS',
+          period: '1000 trx / bulan',
+          description: 'Kuota bulanan gratis. Reset otomatis.',
+          features: [
+            'Booking & penjadwalan online',
+            'POS + pembayaran QRIS/EDC',
+            'Penjualan produk & manajemen stok',
+            'Laporan & insight',
+            'Blast marketing & loyalty dasar',
+            'Support email & chat'
+          ],
+          cta: 'Mulai Gratis'
+        },
+        {
+          name: 'Paket Top-up',
+          price: 'IDR 100K',
+          period: 'per 1000 trx',
+          description: 'Isi kuota via Google Pay / Apple Pay saat kuota gratis habis.',
+          features: [
+            'Semua fitur Starter',
+            'Top-up kuota dikendalikan manager',
+            'Staf & role tak terbatas',
+            'Automasi lanjut & loyalty bertingkat',
+            'Prioritas support'
+          ],
+          cta: 'Top up di dalam app'
+        }
+      ]
+    },
+    security: {
+      title: 'Keamanan & Privasi',
+      subtitle: 'Ini situs marketing. Tidak ada login—hanya kontak yang aman & minim data.',
+      items: [
+        { title: 'HTTPS Sepenuhnya', description: 'Disajikan via TLS. Tidak ada inline script yang mudah diubah.' },
+        { title: 'Tanpa Simpan Data', description: 'Tombol kontak langsung ke email/telepon. Tidak ada form lead atau cookies pelacak.' },
+        { title: 'Pembayaran Aman', description: 'Top-up lewat Google Pay / Apple Pay. Kami tidak menyimpan data kartu.' },
+        { title: 'Kontrol di Aplikasi', description: 'RBAC, audit log, dan top-up terkendali menjaga operasional tetap aman.' }
+      ]
+    },
     quota: {
-      title: 'Paket Gratis Selamanya',
+      title: 'Kuota untuk Bertumbuh',
       statLabel: 'Transaksi Gratis / Bulan',
-      description: 'Cocok untuk rintisan dan barber mandiri. <br> <strong>1000 Transaksi</strong> reset otomatis tiap bulan. <br><span class="top-up-note">Kuota habis? Top up instan via Google Pay atau Apple Pay.</span>',
-      cta: 'Mulai Paket Gratis Sekarang',
+      description: 'Dapat <strong>1000 transaksi gratis</strong> tiap bulan, reset otomatis. <br><span class="top-up-note">Jika habis, isi lagi 1000 via Google Pay / Apple Pay—transaksi berhenti sampai kuota diisi.</span>',
+      cta: 'Mulai Gratis',
       meterText: 'GRATIS'
     },
     testimonials: {
@@ -143,14 +311,32 @@ const messages = {
 
 // State
 const currentLocale = ref('en');
+const STORAGE_KEY = 'barberpos-locale';
+
+const getQueryLocale = () => {
+  if (typeof window === 'undefined') return null;
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get('lang');
+  if (q === 'en' || q === 'id') return q;
+  return null;
+};
 
 // Auto-detect language
 const detectLanguage = () => {
-  const browserLang = navigator.language.split('-')[0];
-  if (browserLang === 'id') {
-    currentLocale.value = 'id';
+  const fromQuery = getQueryLocale();
+  const saved = typeof localStorage !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null;
+
+  if (fromQuery === 'en' || fromQuery === 'id') {
+    currentLocale.value = fromQuery;
+  } else if (saved === 'en' || saved === 'id') {
+    currentLocale.value = saved;
   } else {
-    currentLocale.value = 'en';
+    const browserLang = typeof navigator !== 'undefined' ? navigator.language.split('-')[0] : 'en';
+    currentLocale.value = browserLang === 'id' ? 'id' : 'en';
+  }
+
+  if (typeof localStorage !== 'undefined') {
+    localStorage.setItem(STORAGE_KEY, currentLocale.value);
   }
 };
 
@@ -160,6 +346,9 @@ const t = computed(() => messages[currentLocale.value]);
 // Toggle function
 const toggleLanguage = () => {
   currentLocale.value = currentLocale.value === 'en' ? 'id' : 'en';
+  if (typeof localStorage !== 'undefined') {
+    localStorage.setItem(STORAGE_KEY, currentLocale.value);
+  }
 };
 
 export function useI18n() {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://barberpos.app/sitemap.xml
+Sitemap: https://barberpos.cloud/sitemap.xml

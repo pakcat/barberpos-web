@@ -7,11 +7,14 @@
     
     <div class="container hero-content">
       <div class="logo-wrapper fade-in-up">
-        <img src="/logo.png" alt="BarberPOS Logo" class="brand-logo" loading="lazy" decoding="async" />
+        <img src="/logo.png" alt="BarberPOS brand logo" class="brand-logo" loading="lazy" decoding="async" />
       </div>
 
       <div class="badge fade-in-up delay-100">
         <span>{{ t.hero.badge }}</span>
+      </div>
+      <div class="quota-pill fade-in-up delay-150">
+        1000 {{ currentLocale === 'id' ? 'transaksi gratis / bulan (reset otomatis)' : 'free transactions / month (auto reset)' }}
       </div>
       
       <h1 class="hero-title fade-in-up delay-200">
@@ -88,7 +91,10 @@
              <!-- Tablet (Background) -->
              <div class="device tablet-mockup">
                <div class="screen">
-                 <img src="/tablet-screenshot.png" alt="BarberPOS Tablet Interface" loading="lazy" decoding="async" />
+                 <picture>
+                   <source srcset="/tablet-screenshot.webp" type="image/webp" />
+                   <img src="/tablet-screenshot.png" alt="BarberPOS tablet point-of-sale interface" loading="lazy" decoding="async" />
+                 </picture>
                </div>
                <div class="reflection"></div>
              </div>
@@ -96,7 +102,10 @@
              <!-- Mobile (Foreground) -->
              <div class="device mobile-mockup">
                <div class="screen">
-                 <img src="/mobile-screenshot.png" alt="BarberPOS Mobile Interface" loading="lazy" decoding="async" />
+                 <picture>
+                   <source srcset="/mobile-screenshot.webp" type="image/webp" />
+                   <img src="/mobile-screenshot.png" alt="BarberPOS mobile cashier interface" loading="lazy" decoding="async" />
+                 </picture>
                </div>
                <div class="reflection"></div>
              </div>
@@ -106,6 +115,9 @@
 
       <a href="#features" class="scroll-link fade-in-up delay-400">
         {{ currentLocale === 'id' ? 'Lihat fitur' : 'See features' }} ↓
+      </a>
+      <a href="#quota" class="scroll-link fade-in-up delay-400 secondary-link">
+        {{ currentLocale === 'id' ? 'Lihat paket' : 'See pricing' }} ↓
       </a>
     </div>
   </section>
@@ -199,8 +211,19 @@ const getParticleStyle = (n) => ({
   border-radius: 2px;
 }
 
+.quota-pill {
+  display: inline-block;
+  padding: 8px 14px;
+  background: rgba(22, 118, 188, 0.15);
+  border: 1px solid rgba(22, 118, 188, 0.5);
+  border-radius: 999px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
 .hero-title {
-  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-size: clamp(2.2rem, 8vw, 5rem);
   font-weight: 800;
   line-height: 1;
   margin-bottom: 24px;
@@ -208,7 +231,7 @@ const getParticleStyle = (n) => ({
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 2.8vw, 1.25rem);
+  font-size: clamp(0.95rem, 3vw, 1.25rem);
   color: var(--text-secondary);
   margin-bottom: 48px;
   max-width: 600px;
@@ -247,6 +270,12 @@ const getParticleStyle = (n) => ({
 .scroll-link:hover {
   color: white;
   transform: translateY(-2px);
+}
+
+.secondary-link {
+  display: inline-block;
+  margin-left: 12px;
+  color: var(--accent-primary);
 }
 
 /* Store Buttons with Glassmorphism & Cyber Shine */
@@ -428,6 +457,31 @@ const getParticleStyle = (n) => ({
   .store-btn { width: 100%; justify-content: center; }
   .scroll-link { margin-top: -20px; }
   .ghost-btn { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 80px 0 48px;
+  }
+  .particles { display: none; }
+  .hero-title {
+    font-size: clamp(1.9rem, 9vw, 3rem);
+  }
+  .hero-subtitle {
+    margin-bottom: 32px;
+  }
+  .hero-image-placeholder,
+  .device-composition,
+  .tablet-mockup {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .hero-visual-wrapper {
+    display: none;
+  }
+  .scroll-link {
+    margin-top: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -14,6 +14,7 @@
           :class="{ active: activeIndex === index }"
           role="button"
           :aria-expanded="activeIndex === index"
+          :aria-label="`FAQ ${index + 1}: ${item.q}`"
           @click="toggle(index)"
         >
           <div class="question">

@@ -22,7 +22,10 @@
       <div class="links">
         <RouterLink to="/privacy">{{ t.footer.privacy }}</RouterLink>
         <RouterLink to="/terms">{{ t.footer.terms }}</RouterLink>
-        <a href="mailto:support@barberpos.app">{{ t.footer.contact }}</a>
+        <a href="mailto:kurniafakhrul@gmail.com" aria-label="Email BarberPOS">{{ t.footer.contact }}</a>
+        <a href="tel:+6282234534016" aria-label="Call BarberPOS">+62 822-3453-4016</a>
+        <a href="https://wa.me/6282234534016" aria-label="WhatsApp BarberPOS">WhatsApp</a>
+        <a href="#pricing">Pricing</a>
       </div>
       <div class="copy">
         &copy; 2024 BarberPOS. {{ t.footer.rights }}
@@ -41,9 +44,9 @@ const contactEmail = ref('');
 
 const submitContact = () => {
   const email = encodeURIComponent(contactEmail.value.trim());
-  const subject = encodeURIComponent('Support request');
-  const body = encodeURIComponent('Hi BarberPOS team,\n\nSaya butuh bantuan terkait: ');
-  window.location.href = `mailto:support@barberpos.app?subject=${subject}${email ? `&cc=${email}` : ''}&body=${body}`;
+  const subject = encodeURIComponent('BarberPOS support request');
+  const body = encodeURIComponent(`Hi BarberPOS team,\n\nSaya butuh bantuan terkait: \n\nKontak balik ke: ${email || 'isi email'}\nTelepon/WA: +62 822-3453-4016`);
+  window.location.href = `mailto:kurniafakhrul@gmail.com?subject=${subject}${email ? `&cc=${email}` : ''}&body=${body}`;
 };
 </script>
 

@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref, watch } from 'vue';
 import { RouterView } from 'vue-router'
 import Footer from './components/Footer.vue'
 import { useI18n } from './composables/useI18n';
@@ -18,6 +18,18 @@ const scrollToTop = () => {
 onMounted(() => {
   detectLanguage();
   window.addEventListener('scroll', handleScroll, { passive: true });
+
+  const html = document.documentElement;
+  if (html) {
+    html.setAttribute('lang', currentLocale.value === 'id' ? 'id' : 'en');
+  }
+});
+
+watch(currentLocale, (val) => {
+  const html = document.documentElement;
+  if (html) {
+    html.setAttribute('lang', val === 'id' ? 'id' : 'en');
+  }
 });
 
 onUnmounted(() => {
@@ -51,6 +63,15 @@ onUnmounted(() => {
     >
       ↑
     </button>
+
+    <div class="mobile-sticky-cta">
+      <a class="cta-item" href="tel:+6282234534016" aria-label="Call BarberPOS">
+        📞 <span>+62 822 3453 4016</span>
+      </a>
+      <a class="cta-item" href="mailto:kurniafakhrul@gmail.com" aria-label="Email BarberPOS">
+        ✉️ <span>Email</span>
+      </a>
+    </div>
   </main>
 </template>
 
@@ -123,5 +144,38 @@ onUnmounted(() => {
 
 @media (max-width: 768px) {
   .back-to-top { display: none; }
+}
+
+.mobile-sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  padding: 10px 16px;
+  gap: 10px;
+  background: linear-gradient(180deg, rgba(5,5,5,0.5), rgba(5,5,5,0.9));
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 950;
+}
+
+.mobile-sticky-cta .cta-item {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(22, 118, 188, 0.15);
+  border: 1px solid rgba(22, 118, 188, 0.4);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-cta { display: flex; }
 }
 </style>
