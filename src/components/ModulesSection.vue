@@ -90,13 +90,13 @@ const getModuleIcon = (title) => moduleIcons[title] || moduleIcons['Dashboard & 
 
 const getQuickFeatures = (title) => {
   const features = {
-    'Dashboard & Insights': ['Real-time Metrics', 'Top Performers', 'Revenue Tracking'],
-    'Cashier & Payments': ['QRIS Integrated', 'Split Billing', 'Discount Support'],
-    'Membership & Quota': ['Customer Points', 'Auto-reset Quota', 'Access Control'],
-    'Products & Stock': ['Inventory Alerts', 'Batch Updates', 'Category Management'],
-    'Staff & Activity Logs': ['Shift Management', 'Security Audit', 'Commission Tracking'],
-    'Closing & Reports': ['EOD Reconciliation', 'PDF Exports', 'Financial Balance'],
-    'Notifications': ['Push Alerts', 'In-app History', 'Instant Updates']
+    'Dashboard & Insights': ['Daily summary', 'Top services', 'Top staff'],
+    'Cashier & Payments': ['Cash sale', 'Receipt printing', 'Offline queue (cash)'],
+    'Membership & Quota': ['Monthly quota reset', 'Top-up by manager', 'Customer history'],
+    'Products & Stock': ['Stock tracking', 'Adjustments history', 'Stock overview'],
+    'Staff & Activity Logs': ['Roles & access', 'Attendance', 'Activity logs'],
+    'Closing & Reports': ['Closing summary', 'Finance entries', 'CSV/XLSX export'],
+    'Notifications': ['In-app notifications', 'Delivery token', 'History']
   };
   return features[title] || ['Fast', 'Secure', 'Intuitive'];
 };

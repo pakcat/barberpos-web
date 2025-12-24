@@ -67,7 +67,7 @@ import { featureIcons } from '../assets/featureIcons';
 const { t } = useI18n();
 useScrollObserver();
 
-const getFeatureIcon = (title) => featureIcons[title] || featureIcons['Membership System'];
+const getFeatureIcon = (title) => featureIcons[title] || featureIcons['Cashier & Payments'];
 
 const getBentoClass = (index) => {
   if (index === 0) return 'span-2-col span-2-row'; // Featured CRM

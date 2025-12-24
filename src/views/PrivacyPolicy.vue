@@ -11,7 +11,7 @@
 
       <section>
         <h2>2. Information We Collect</h2>
-        <p>We believe in data minimization. As an offline-first point-of-sale system, most of your data remains locally on your device.</p>
+        <p>We believe in data minimization. BarberPOS is designed to work reliably with local storage on your device, with optional sync when online.</p>
         <ul>
           <li><strong>Local Data:</strong> Transaction history, customer lists, and inventory data are stored locally on your device.</li>
           <li><strong>Membership Data:</strong> If you use the Membership module, customer details (name, phone number, points) are stored locally to facilitate loyalty programs.</li>
@@ -23,7 +23,6 @@
               <li><strong>Storage:</strong> To save backups and reports.</li>
             </ul>
           </li>
-          <li><strong>Usage Data:</strong> Anonymous analytics to help us improve app performance (crashes, session duration).</li>
         </ul>
       </section>
 
@@ -34,10 +33,7 @@
 
       <section>
         <h2>4. Third-Party Services</h2>
-        <p>We may use third-party services for specific functions:</p>
-        <ul>
-          <li><strong>Payment Processors:</strong> If you use premium features, payments are processed by Apple (App Store) or Google (Play Store). We do not store your credit card details.</li>
-        </ul>
+        <p>BarberPOS may integrate with third-party services depending on your deployment (for example, notification providers). We do not sell your personal data.</p>
       </section>
 
       <section>
@@ -47,7 +43,7 @@
 
       <section>
         <h2>6. Contact Us</h2>
-        <p>If you have questions about this policy, please contact us at support@barberpos.app.</p>
+        <p>If you have questions about this policy, please contact us at kurniafakhrul@gmail.com.</p>
       </section>
     </div>
   </div>

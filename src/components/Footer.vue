@@ -12,11 +12,10 @@
           type="email" 
           name="email" 
           autocomplete="email" 
-          required 
-          placeholder="Your email"
-          aria-label="Your email"
+          :placeholder="t.footer.emailPlaceholder"
+          :aria-label="t.footer.emailPlaceholder"
         />
-        <button type="submit">Contact Support</button>
+        <button type="submit">{{ t.footer.contactButton }}</button>
       </form>
 
       <div class="links">
@@ -25,7 +24,7 @@
         <a href="mailto:kurniafakhrul@gmail.com" aria-label="Email BarberPOS">{{ t.footer.contact }}</a>
         <a href="tel:+6282234534016" aria-label="Call BarberPOS">+62 822-3453-4016</a>
         <a href="https://wa.me/6282234534016" aria-label="WhatsApp BarberPOS">WhatsApp</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#pricing">{{ t.footer.pricingLink }}</a>
       </div>
       <div class="copy">
         &copy; 2024 BarberPOS. {{ t.footer.rights }}

@@ -14,7 +14,7 @@
         <span>{{ t.hero.badge }}</span>
       </div>
       <div class="quota-pill fade-in-up delay-150">
-        1000 {{ currentLocale === 'id' ? 'transaksi gratis / bulan (reset otomatis)' : 'free transactions / month (auto reset)' }}
+        1,000 {{ currentLocale === 'id' ? 'kuota membership / bulan (reset otomatis)' : 'membership quota / month (auto reset)' }}
       </div>
       
       <h1 class="hero-title fade-in-up delay-200">
@@ -27,53 +27,42 @@
       </p>
 
       <div class="trust-pill fade-in-up delay-300">
-        {{ currentLocale === 'id' ? 'Tanpa kartu kredit' : 'No credit card needed' }}
+        {{ currentLocale === 'id' ? 'Offline untuk transaksi tunai • Sync otomatis saat online' : 'Offline for cash sales • Auto sync when online' }}
       </div>
       
       <div class="cta-group fade-in-up delay-300">
-        <!-- Google Play -->
-        <a 
-          href="https://play.google.com/store" 
-          class="store-btn google-play"
+        <a
+          href="https://wa.me/6282234534016"
+          class="store-btn whatsapp"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Download BarberPOS on Google Play"
+          aria-label="Chat BarberPOS on WhatsApp"
         >
-          <svg class="store-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.609 1.84C3.205 2.15 3.003 2.76 3 3.39v17.228c.003.63.205 1.24.609 1.55.15.115.326.195.511.232l10.84-10.84-10.84-10.88c-.183.037-.36.117-.511.26z" fill="#00D2FF"/>
-            <path d="M15.485 11.028l5.8-5.8c.24-.24.36-.6.315-.885-.06-.39-.375-.69-.765-.75-.36-.045-.735.075-.99.315l-4.36 4.36-2.76 2.76 2.76 2.76 4.36 4.34c.255.255.63.36.99.315.39-.06.705-.36.765-.75.045-.285-.09-.645-.315-.885l-5.8-5.78z" fill="#00D2FF"/>
-            <path d="M14.97 11.56L4.12 22.408c.555.225 1.29.075 1.77-.375l10.08-10.08-1-1.005-.985-.975-.015.586z" fill="#FF3A44"/>
-            <path d="M14.97 12.42l.015.585.985-.99 1-1.005L6.89.938c-.48-.45-1.215-.6-1.77-.375L14.97 11.415v1.005z" fill="#00E676"/>
+          <svg class="store-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="currentColor" d="M12 2a10 10 0 0 0-8.47 15.34L2 22l4.79-1.47A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.13l-.29-.17-2.84.87.9-2.76-.19-.3A8 8 0 1 1 12 20zm4.46-5.28c-.24-.12-1.4-.69-1.62-.77-.22-.08-.38-.12-.54.12-.16.24-.62.77-.76.93-.14.16-.28.18-.52.06a6.55 6.55 0 0 1-1.93-1.19 7.26 7.26 0 0 1-1.34-1.67c-.14-.24 0-.38.1-.5.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.11.16 1.53.1.47-.07 1.4-.57 1.6-1.12.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28z"/>
           </svg>
           <div class="store-text">
-            <span class="small-text">{{ currentLocale === 'id' ? 'Temukan di' : 'Get it on' }}</span>
-            <span class="big-text">Google Play</span>
+            <span class="small-text">{{ currentLocale === 'id' ? 'Chat via' : 'Chat on' }}</span>
+            <span class="big-text">{{ t.hero.ctaPrimary }}</span>
           </div>
         </a>
 
-        <!-- App Store -->
-        <a 
-          href="https://apps.apple.com/app" 
-          class="store-btn app-store"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Download BarberPOS on the App Store"
+        <a
+          href="mailto:kurniafakhrul@gmail.com"
+          class="store-btn email"
+          aria-label="Email BarberPOS"
         >
-          <svg class="store-icon" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
-             <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-11.4 69.5-34.3z"/>
+          <svg class="store-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
           </svg>
           <div class="store-text">
-            <span class="small-text">{{ currentLocale === 'id' ? 'Download di' : 'Download on the' }}</span>
-            <span class="big-text">App Store</span>
+            <span class="small-text">{{ currentLocale === 'id' ? 'Atau' : 'Or' }}</span>
+            <span class="big-text">{{ t.hero.ctaSecondary }}</span>
           </div>
         </a>
 
-        <a 
-          href="#modules" 
-          class="ghost-btn"
-          aria-label="Jump to modules"
-        >
-          {{ currentLocale === 'id' ? 'Lihat modul' : 'See modules' }}
+        <a href="#modules" class="ghost-btn" aria-label="Jump to modules">
+          {{ t.hero.ctaTertiary }}
         </a>
       </div>
       

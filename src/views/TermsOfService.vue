@@ -16,8 +16,7 @@
 
       <section>
         <h2>3. Free & Premium Tiers</h2>
-        <p><strong>Free Tier:</strong> Includes limited monthly transactions (1,000/month). This quota resets automatically.</p>
-        <p><strong>Premium Features:</strong> We may offer premium features which are subject to separate pricing and subscription terms.</p>
+        <p>BarberPOS may be offered in different deployment or support options (for example: self-managed vs assisted setup). If you request paid services, pricing will be provided separately.</p>
       </section>
 
       <section>

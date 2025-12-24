@@ -6,7 +6,6 @@ import ModulesSection from '../components/ModulesSection.vue'
 import TestimonialsSection from '../components/TestimonialsSection.vue'
 import QuotaSection from '../components/QuotaSection.vue'
 import FAQSection from '../components/FAQSection.vue'
-import StatsSection from '../components/StatsSection.vue'
 import PersonasSection from '../components/PersonasSection.vue'
 import PricingSection from '../components/PricingSection.vue'
 import SecuritySection from '../components/SecuritySection.vue'
@@ -18,7 +17,6 @@ import SecuritySection from '../components/SecuritySection.vue'
     <FeaturesSection />
     <ValuePropsSection />
     <ModulesSection />
-    <StatsSection />
     <TestimonialsSection />
     <PersonasSection />
     <PricingSection />

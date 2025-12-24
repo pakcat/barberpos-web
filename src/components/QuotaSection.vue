@@ -9,7 +9,12 @@
             <span class="label">{{ t.quota.statLabel }}</span>
           </div>
           <p class="description" v-html="t.quota.description"></p>
-          <button class="btn btn-primary pulse-btn hover-elevate quota-btn">{{ t.quota.cta }}</button>
+          <a
+            class="btn btn-primary pulse-btn hover-elevate quota-btn"
+            href="https://wa.me/6282234534016"
+            target="_blank"
+            rel="noopener noreferrer"
+          >{{ t.quota.cta }}</a>
         </div>
         
         <div class="visual">

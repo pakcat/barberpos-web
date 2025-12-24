@@ -1,10 +1,10 @@
 <script setup>
 import { onMounted, onUnmounted, ref, watch } from 'vue';
-import { RouterView } from 'vue-router'
-import Footer from './components/Footer.vue'
+import { RouterView } from 'vue-router';
+import Footer from './components/Footer.vue';
 import { useI18n } from './composables/useI18n';
 
-const { detectLanguage, toggleLanguage, currentLocale } = useI18n();
+const { detectLanguage, toggleLanguage, currentLocale, t } = useI18n();
 const showBackToTop = ref(false);
 
 const handleScroll = () => {
@@ -40,9 +40,9 @@ onUnmounted(() => {
 <template>
   <main>
     <div class="mesh-bg"></div>
-    <button 
-      type="button" 
-      class="language-switcher" 
+    <button
+      type="button"
+      class="language-switcher"
       @click="toggleLanguage"
       :aria-label="`Switch language. Current ${currentLocale === 'en' ? 'English' : 'Bahasa Indonesia'}`"
     >
@@ -54,7 +54,7 @@ onUnmounted(() => {
     <RouterView />
     <Footer />
 
-    <button 
+    <button
       v-if="showBackToTop"
       class="back-to-top"
       type="button"
@@ -66,10 +66,12 @@ onUnmounted(() => {
 
     <div class="mobile-sticky-cta">
       <a class="cta-item" href="tel:+6282234534016" aria-label="Call BarberPOS">
-        📞 <span>+62 822 3453 4016</span>
+        {{ currentLocale === 'id' ? 'Telepon' : 'Call' }}
+        <span>+62 822 3453 4016</span>
       </a>
       <a class="cta-item" href="mailto:kurniafakhrul@gmail.com" aria-label="Email BarberPOS">
-        ✉️ <span>Email</span>
+        {{ t.footer.email }}
+        <span>{{ t.footer.emailShort }}</span>
       </a>
     </div>
   </main>
@@ -135,6 +137,8 @@ onUnmounted(() => {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 18px;
+  line-height: 1;
 }
 
 .back-to-top:hover {
@@ -143,7 +147,9 @@ onUnmounted(() => {
 }
 
 @media (max-width: 768px) {
-  .back-to-top { display: none; }
+  .back-to-top {
+    display: none;
+  }
 }
 
 .mobile-sticky-cta {
@@ -154,7 +160,7 @@ onUnmounted(() => {
   display: none;
   padding: 10px 16px;
   gap: 10px;
-  background: linear-gradient(180deg, rgba(5,5,5,0.5), rgba(5,5,5,0.9));
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.5), rgba(5, 5, 5, 0.9));
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 950;
@@ -175,7 +181,14 @@ onUnmounted(() => {
   text-decoration: none;
 }
 
+.mobile-sticky-cta .cta-item span {
+  opacity: 0.85;
+  font-weight: 600;
+}
+
 @media (max-width: 768px) {
-  .mobile-sticky-cta { display: flex; }
+  .mobile-sticky-cta {
+    display: flex;
+  }
 }
 </style>
