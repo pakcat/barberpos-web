@@ -7,16 +7,17 @@ const messages = {
       title: 'Barbershop POS',
       titleHighlight: 'Fast & Neat.',
       subtitle:
-        'A practical POS app for barbershops: cashier, inventory, memberships, staff, closing, and reports. Works offline for cash sales and syncs automatically when online.',
+        'A practical POS app for barbershops: cashier, inventory, memberships, staff, closing, and reports. Integrates with Midtrans for QRIS and other cashless payments. Works offline for cash sales and syncs automatically when online.',
       ctaPrimary: 'Chat on WhatsApp',
       ctaSecondary: 'Email us',
       ctaTertiary: 'See modules',
+      comingSoon: 'Coming soon',
     },
     features: {
       title: 'Built for Daily Ops',
       subtitle: 'The core features your barbershop actually needs.',
       items: [
-        { title: 'Cashier & Payments', description: 'Cashier flow with cash, QRIS, and card workflows.' },
+        { title: 'Cashier & Payments', description: 'Cashier flow with cash, QRIS (Midtrans), and card workflows.' },
         { title: 'Offline Sync', description: 'Queue cash orders offline and sync later without duplicates.' },
         { title: 'Inventory Control', description: 'Track stock, adjustments, and history. Keep products in sync.' },
         { title: 'Refund & Audit Logs', description: 'Refund flow with notes and auditability for key actions.' },
@@ -127,7 +128,7 @@ const messages = {
         },
         {
           q: 'Can it run offline?',
-          a: 'Yes for cash sales: orders can be queued offline and synced automatically when online. Non-cash needs internet.',
+          a: 'Yes for cash sales: orders can be queued offline and synced automatically when online. Cashless payments (Midtrans/QRIS) require internet.',
         },
         {
           q: 'Thermal printer support?',
@@ -158,16 +159,17 @@ const messages = {
       title: 'POS Barbershop',
       titleHighlight: 'Cepat & Rapi.',
       subtitle:
-        'Aplikasi kasir barbershop: transaksi, stok, membership, karyawan, closing, dan laporan. Bisa offline untuk transaksi tunai dan akan sinkron otomatis saat online.',
+        'Aplikasi kasir barbershop: transaksi, stok, membership, karyawan, closing, dan laporan. Terhubung ke Midtrans untuk QRIS dan pembayaran non-tunai lainnya. Bisa offline untuk transaksi tunai dan akan sinkron otomatis saat online.',
       ctaPrimary: 'Chat WhatsApp',
       ctaSecondary: 'Email kami',
       ctaTertiary: 'Lihat modul',
+      comingSoon: 'Segera hadir',
     },
     features: {
       title: 'Fokus Operasional Harian',
       subtitle: 'Fitur inti yang relevan untuk barbershop.',
       items: [
-        { title: 'Kasir & Pembayaran', description: 'Alur kasir untuk tunai, QRIS, dan kartu.' },
+        { title: 'Kasir & Pembayaran', description: 'Alur kasir untuk tunai, QRIS (Midtrans), dan kartu.' },
         { title: 'Offline Sync', description: 'Simpan transaksi tunai saat offline, sync aman tanpa duplikasi.' },
         { title: 'Kontrol Stok', description: 'Stok, penyesuaian, dan riwayat perubahan yang jelas.' },
         { title: 'Refund & Audit Log', description: 'Refund dengan catatan + jejak aktivitas untuk aksi penting.' },
@@ -278,7 +280,7 @@ const messages = {
         },
         {
           q: 'Bisa dipakai offline?',
-          a: 'Bisa untuk transaksi tunai: order disimpan offline lalu sync otomatis saat online. Pembayaran non-tunai butuh internet.',
+          a: 'Bisa untuk transaksi tunai: order disimpan offline lalu sync otomatis saat online. Pembayaran non-tunai (Midtrans/QRIS) butuh internet.',
         },
         {
           q: 'Support printer thermal?',
@@ -320,19 +322,12 @@ const getQueryLocale = () => {
 const detectLanguage = () => {
   const fromQuery = getQueryLocale();
   const saved = typeof localStorage !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null;
-  const browserLangRaw =
-    typeof navigator !== 'undefined'
-      ? navigator.language || (navigator.languages && navigator.languages[0]) || ''
-      : '';
-  const browserLang = browserLangRaw ? browserLangRaw.toLowerCase().split('-')[0] : '';
 
   let resolved = DEFAULT_LOCALE;
   if (fromQuery === 'en' || fromQuery === 'id') {
     resolved = fromQuery;
   } else if (saved === 'en' || saved === 'id') {
     resolved = saved;
-  } else if (browserLang && browserLang !== 'id') {
-    resolved = 'en';
   }
 
   currentLocale.value = resolved;
@@ -358,4 +353,3 @@ export function useI18n() {
     toggleLanguage,
   };
 }
-

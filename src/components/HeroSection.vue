@@ -31,6 +31,28 @@
       </div>
       
       <div class="cta-group fade-in-up delay-300">
+        <div class="store-btn coming-soon" aria-label="Google Play (Coming soon)" aria-disabled="true">
+          <svg class="store-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="currentColor" d="M8 5.14v13.72L19 12 8 5.14z" />
+          </svg>
+          <div class="store-text">
+            <span class="small-text">{{ t.hero.comingSoon }}</span>
+            <span class="big-text">Google Play</span>
+          </div>
+        </div>
+
+        <div class="store-btn coming-soon" aria-label="App Store (Coming soon)" aria-disabled="true">
+          <svg class="store-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M16.365 1.43c0 1.14-.42 2.2-1.2 3.05-.79.86-2.1 1.52-3.22 1.43-.14-1.1.45-2.24 1.2-3.06.82-.9 2.24-1.56 3.22-1.42zM20.5 17.13c-.46 1.06-.68 1.53-1.28 2.47-.84 1.3-2.02 2.92-3.5 2.93-1.32.01-1.66-.86-3.43-.85-1.77.01-2.14.87-3.46.86-1.48-.01-2.62-1.49-3.46-2.79-2.35-3.61-2.59-7.84-1.15-10.06.98-1.52 2.52-2.41 3.96-2.41 1.48 0 2.41.86 3.63.86 1.19 0 1.92-.86 3.62-.86 1.28 0 2.64.72 3.62 1.97-3.18 1.74-2.67 6.23 1.45 7.88z"
+            />
+          </svg>
+          <div class="store-text">
+            <span class="small-text">{{ t.hero.comingSoon }}</span>
+            <span class="big-text">App Store</span>
+          </div>
+        </div>
         <a
           href="https://wa.me/6282234534016"
           class="store-btn whatsapp"
@@ -304,6 +326,16 @@ const getParticleStyle = (n) => ({
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(22, 118, 188, 0.5);
   box-shadow: 0 10px 30px rgba(22, 118, 188, 0.2);
+}
+
+.store-btn.coming-soon {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.store-btn.coming-soon::before {
+  display: none;
 }
 
 .store-icon {
