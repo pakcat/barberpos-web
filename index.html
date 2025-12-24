@@ -11,10 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta Tags -->
-    <title>BarberPOS - POS Premium untuk Barbershop</title>
-    <meta name="title" content="BarberPOS - POS Premium untuk Barbershop" />
-    <meta name="description" content="Kelola barbershop lebih rapi dengan BarberPOS. Kasir, stok, membership, karyawan, closing, dan laporan. Bisa offline untuk transaksi tunai dan sinkron otomatis saat online." />
-    <meta name="keywords" content="aplikasi kasir barbershop, barber pos, aplikasi kasir gratis, sistem barbershop, point of sale barbershop" />
+    <title>BarberPOS — Aplikasi Kasir / POS untuk Barbershop & Tukang Cukur</title>
+    <meta name="title" content="BarberPOS — Aplikasi Kasir / POS untuk Barbershop & Tukang Cukur" />
+    <meta name="description" content="BarberPOS adalah aplikasi kasir/POS untuk barbershop & tukang cukur: kasir, stok, membership, karyawan, closing, laporan, dan audit log. Terhubung ke Midtrans untuk QRIS & pembayaran non-tunai. Bisa offline untuk transaksi tunai dan sinkron otomatis saat online." />
+    <meta name="keywords" content="aplikasi pos barbershop, aplikasi kasir barbershop, aplikasi kasir tukang cukur, pos tukang cukur, barber pos, sistem kasir barbershop, point of sale barbershop, qris barbershop, midtrans qris" />
     <meta name="robots" content="index,follow" />
     <meta http-equiv="Content-Language" content="id" />
     <meta name="theme-color" content="#050505" />
@@ -31,15 +31,15 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://barberpos.cloud/" />
-    <meta property="og:title" content="BarberPOS - POS Premium untuk Barbershop" />
-    <meta property="og:description" content="Kelola barbershop dengan BarberPOS. Kasir cepat, stok rapi, membership, closing, laporan, dan offline sync untuk transaksi tunai." />
+    <meta property="og:title" content="BarberPOS — Aplikasi Kasir / POS untuk Barbershop & Tukang Cukur" />
+    <meta property="og:description" content="Aplikasi kasir/POS untuk barbershop: kasir, stok, membership, closing, laporan, audit log. QRIS & non-tunai via Midtrans. Offline untuk transaksi tunai + auto sync saat online." />
     <meta property="og:image" content="https://barberpos.cloud/og-image.jpg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://barberpos.cloud/" />
-    <meta property="twitter:title" content="BarberPOS - POS Premium untuk Barbershop" />
-    <meta property="twitter:description" content="Kelola barbershop dengan BarberPOS. Kasir cepat, stok rapi, membership, closing, laporan, dan offline sync untuk transaksi tunai." />
+    <meta property="twitter:title" content="BarberPOS — Aplikasi Kasir / POS untuk Barbershop & Tukang Cukur" />
+    <meta property="twitter:description" content="Aplikasi kasir/POS untuk barbershop: kasir, stok, membership, closing, laporan, audit log. QRIS & non-tunai via Midtrans. Offline untuk transaksi tunai + auto sync saat online." />
     <meta property="twitter:image" content="https://barberpos.cloud/og-image.jpg" />
 
     <!-- Schema.org JSON-LD -->
@@ -50,6 +50,8 @@
       "name": "BarberPOS",
       "inLanguage": "id",
       "applicationCategory": "BusinessApplication",
+      "description": "Aplikasi kasir/POS untuk barbershop & tukang cukur: kasir, stok, membership, karyawan, closing, laporan, audit log. Terhubung ke Midtrans untuk QRIS dan pembayaran non-tunai.",
+      "keywords": "aplikasi pos barbershop, aplikasi kasir tukang cukur, pos barbershop, qris barbershop, midtrans qris",
       "operatingSystem": "Android",
       "offers": {
         "@type": "Offer",
@@ -57,7 +59,7 @@
         "priceCurrency": "IDR",
         "description": "Aplikasi kasir barbershop (beta)"
       },
-      "featureList": "Kasir, stok, membership, karyawan, closing, laporan, offline sync, dan thermal printing"
+      "featureList": "Kasir, stok, membership, karyawan, closing, laporan, audit log, QRIS via Midtrans, offline sync, dan thermal printing"
     }
     </script>
 
@@ -103,7 +105,15 @@
           "name": "Bisa dipakai offline?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Bisa untuk transaksi tunai: order disimpan offline lalu sync otomatis saat online. Pembayaran non-tunai butuh internet."
+            "text": "Bisa untuk transaksi tunai: order disimpan offline lalu sync otomatis saat online. Pembayaran non-tunai (Midtrans/QRIS) butuh internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bisa QRIS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bisa. Pembayaran QRIS dan non-tunai terhubung ke Midtrans (membutuhkan koneksi internet)."
           }
         },
         {
