@@ -4,10 +4,10 @@ const messages = {
   en: {
     hero: {
       badge: 'BarberPOS Mobile',
-      title: 'Barbershop POS',
-      titleHighlight: 'Fast & Neat.',
+      title: 'Free Barbershop POS',
+      titleHighlight: 'Gratis & Offline.',
       subtitle:
-        'A practical POS app for barbershops: cashier, inventory, memberships, staff, closing, and reports. Integrates with Midtrans for QRIS and other cashless payments. Works offline for cash sales and syncs automatically when online.',
+        'A free (gratis) POS app for barbershops: cashier, inventory, memberships, staff, closing, and reports. Works offline for cash sales and syncs automatically when online. QRIS/cashless can be connected when you are ready.',
       ctaPrimary: 'Chat on WhatsApp',
       ctaSecondary: 'Email us',
       ctaTertiary: 'See modules',
@@ -17,7 +17,7 @@ const messages = {
       title: 'Built for Daily Ops',
       subtitle: 'The core features your barbershop actually needs.',
       items: [
-        { title: 'Cashier & Payments', description: 'Cashier flow with cash, QRIS (Midtrans), and card workflows.' },
+        { title: 'Cashier & Payments', description: 'Cashier flow with cash and cashless options (QRIS) when connected.' },
         { title: 'Offline Sync', description: 'Queue cash orders offline and sync later without duplicates.' },
         { title: 'Inventory Control', description: 'Track stock, adjustments, and history. Keep products in sync.' },
         { title: 'Refund & Audit Logs', description: 'Refund flow with notes and auditability for key actions.' },
@@ -128,7 +128,7 @@ const messages = {
         },
         {
           q: 'Can it run offline?',
-          a: 'Yes for cash sales: orders can be queued offline and synced automatically when online. Cashless payments (Midtrans/QRIS) require internet.',
+          a: 'Yes for cash sales: orders can be queued offline and synced automatically when online. Cashless payments (QRIS) require internet and an integration.',
         },
         {
           q: 'Thermal printer support?',
@@ -156,10 +156,10 @@ const messages = {
   id: {
     hero: {
       badge: 'BarberPOS Mobile',
-      title: 'POS Barbershop',
-      titleHighlight: 'Cepat & Rapi.',
+      title: 'Free POS Barbershop',
+      titleHighlight: 'Gratis & Offline.',
       subtitle:
-        'Aplikasi kasir barbershop: transaksi, stok, membership, karyawan, closing, dan laporan. Terhubung ke Midtrans untuk QRIS dan pembayaran non-tunai lainnya. Bisa offline untuk transaksi tunai dan akan sinkron otomatis saat online.',
+        'Aplikasi kasir barbershop gratis: transaksi, stok, membership, karyawan, closing, dan laporan. Bisa offline untuk transaksi tunai dan akan sinkron otomatis saat online. QRIS/pembayaran non-tunai bisa disambungkan ketika sudah siap.',
       ctaPrimary: 'Chat WhatsApp',
       ctaSecondary: 'Email kami',
       ctaTertiary: 'Lihat modul',
@@ -169,7 +169,7 @@ const messages = {
       title: 'Fokus Operasional Harian',
       subtitle: 'Fitur inti yang relevan untuk barbershop.',
       items: [
-        { title: 'Kasir & Pembayaran', description: 'Alur kasir untuk tunai, QRIS (Midtrans), dan kartu.' },
+        { title: 'Kasir & Pembayaran', description: 'Alur kasir untuk tunai dan opsi non-tunai (QRIS) saat sudah disambungkan.' },
         { title: 'Offline Sync', description: 'Simpan transaksi tunai saat offline, sync aman tanpa duplikasi.' },
         { title: 'Kontrol Stok', description: 'Stok, penyesuaian, dan riwayat perubahan yang jelas.' },
         { title: 'Refund & Audit Log', description: 'Refund dengan catatan + jejak aktivitas untuk aksi penting.' },
@@ -280,7 +280,7 @@ const messages = {
         },
         {
           q: 'Bisa dipakai offline?',
-          a: 'Bisa untuk transaksi tunai: order disimpan offline lalu sync otomatis saat online. Pembayaran non-tunai (Midtrans/QRIS) butuh internet.',
+          a: 'Bisa untuk transaksi tunai: order disimpan offline lalu sync otomatis saat online. Pembayaran non-tunai (QRIS) butuh internet dan integrasi.',
         },
         {
           q: 'Support printer thermal?',
